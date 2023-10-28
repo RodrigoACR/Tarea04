@@ -10,7 +10,6 @@
 									class="lg:text-6xl text-4xl text-center leading-normal font-bold purplerainbow-text pb-5">
 									{{ page.title }} </h1>
 							</div>
-
 							<div class="flex">
 								<div class="w-1/4 p-2">
 									<img :src="`https://cms-una.000webhostapp.com/storage/uploads${page.image.path}`"
@@ -29,16 +28,17 @@
 									</div>
 								</div>
 								<div class="w-2/4 p-2">
-									<h3 v-if="page.descripcion.informacion != null">Información</h3>
-									<p> {{ page.descripcion.informacion }} </p>
-									<h3 v-if="page.descripcion.sinopsis != null">Sinopsis</h3>
-									<p> {{ page.descripcion.sinopsis }} </p>
-									<h3 v-if="page.descripcion.premios != null">Premios</h3>
-									<p> {{ page.descripcion.premios }} </p>
-									<h3 v-if="page.descripcion.datosCuriosos != null">Datos Curiosos</h3>
-									<p> {{ page.descripcion.datosCuriosos }} </p>
+									<div>
+										<h3 v-if="page.descripcion.informacion != null">Información</h3>
+										<p> {{ page.descripcion.informacion }} </p>
+										<h3 v-if="page.descripcion.sinopsis != null">Sinopsis</h3>
+										<p> {{ page.descripcion.sinopsis }} </p>
+										<h3 v-if="page.descripcion.premios != null">Premios</h3>
+										<p> {{ page.descripcion.premios }} </p>
+										<h3 v-if="page.descripcion.datosCuriosos != null">Datos Curiosos</h3>
+										<p> {{ page.descripcion.datosCuriosos }} </p>
+									</div>
 								</div>
-
 								<div class="w-1/4 p-2">
 									<table class="table-auto">
 										<thead>
@@ -67,7 +67,7 @@
 
 											<tr class="border-b dark:border-neutral-500">
 												<th class="text-left pr-4">Direccion</th>
-												<td>												
+												<td>
 													<NuxtLink class="orangerainbow-text"
 														:to="'/director/' + page.director1Id._id"> {{ page.director1 }}
 													</NuxtLink>
@@ -92,15 +92,15 @@
 													</div>
 												</td>
 											</tr>
-											
+
 											<tr class="border-b dark:border-neutral-500">
 												<th class="text-left pr-4">Estudio</th>
 												<td>
-													<NuxtLink  v-if="page.estudio1Id" class="oceanrainbow-text"
+													<NuxtLink v-if="page.estudio1Id" class="oceanrainbow-text"
 														:to="'/estudio/' + page.estudio1Id._id"> {{ page.estudio1 }}
 													</NuxtLink>
 													<br />
-													
+
 													<div v-if="page.estudio2">
 														<NuxtLink v-if="page.estudio2Id" class="purplerainbow-text"
 															:to="'/estudio/' + page.estudio2Id._id">
@@ -110,13 +110,16 @@
 															{{ page.estudio2 }}
 														</NuxtLink>
 													</div>
-													
+
 												</td>
 											</tr>
 										</tbody>
 									</table>
 								</div>
 
+							</div>
+							<div>
+								<Coments />
 							</div>
 						</div>
 						<br />

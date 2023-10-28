@@ -15,26 +15,27 @@
 										class="w-full rounded-xl">
 								</div>
 								<div class="w-2/4 p-2">
-									<p>{{ page.descripcion }}</p>
-									<div class="p-2 flex w-full">
-										<div class="p-1">
-											<h2 class="text-2xl text-left leading-normal font-bold pb-2">
-												Peliculas
-											</h2>
-											<li v-for="pelicula1 in peliculas1" :key="pelicula1._id">
-												<NuxtLink :to="`/pelicula/` + pelicula1._id" class="purplerainbow-text">
-													{{ pelicula1.title }}
-												</NuxtLink>
-											</li>
-											<li v-for="pelicula2 in peliculas2" :key="pelicula2._id">
-												<NuxtLink :to="`/pelicula/` + pelicula2._id" class="orangerainbow-text">
-													{{ pelicula2.title }}
-												</NuxtLink>
-											</li>
+									<div>
+										<p>{{ page.descripcion }}</p>
+										<div class="p-2 flex w-full">
+											<div class="p-1">
+												<h2 class="text-2xl text-left leading-normal font-bold pb-2">
+													Peliculas
+												</h2>
+												<li v-for="pelicula1 in peliculas1" :key="pelicula1._id">
+													<NuxtLink :to="`/pelicula/` + pelicula1._id" class="purplerainbow-text">
+														{{ pelicula1.title }}
+													</NuxtLink>
+												</li>
+												<li v-for="pelicula2 in peliculas2" :key="pelicula2._id">
+													<NuxtLink :to="`/pelicula/` + pelicula2._id" class="orangerainbow-text">
+														{{ pelicula2.title }}
+													</NuxtLink>
+												</li>
+											</div>
 										</div>
 									</div>
 								</div>
-
 								<div class="w-1/4 p-2">
 									<table class="table-auto">
 										<thead>
@@ -71,6 +72,9 @@
 									</table>
 								</div>
 
+							</div>
+							<div>
+								<Coments />
 							</div>
 						</div>
 

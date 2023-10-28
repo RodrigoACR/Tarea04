@@ -4,7 +4,7 @@
 			<article class="lg:pt-20 pt-10 relative flex items-start lg:space-x-10 px-[5%] lg:px-[10%]">
 				<ClientOnly>
 					<div class="container">
-						<ContentRenderer class="prose lg:prose-base prose-sm prose-slate pr-7 max-w-none" :value="page">
+						<div class="prose lg:prose-base prose-sm prose-slate pr-7 max-w-none" :value="page">
 							<div>
 								<h1 class="lg:text-6xl text-4xl text-center leading-normal font-bold rainbow-text pb-5">
 									{{ page.title }} </h1>
@@ -17,7 +17,7 @@
 
 								<div class="w-2/4 p-2">
 									<p>{{ page.descripcion }}</p>
-									<br/>
+									<br />
 									<h2 class="text-2xl text-left leading-normal font-bold pb-2">
 										Premios
 									</h2>
@@ -45,9 +45,9 @@
 								</div>
 								<div class="w-1/4 p-2">
 									<table class="table-auto">
-										<thead class="p-2 bg-neutral-800 font-medium text-white">
+										<thead class="p-2">
 											<tr>
-												<th colspan="2">Informacion</th>
+												<th colspan="2" class="bg-neutral-800 font-bold text-white text-center">Informacion</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -75,8 +75,10 @@
 									</table>
 								</div>
 							</div>
-						</ContentRenderer>
-
+							<div>
+								<Coments />
+							</div>
+						</div>
 						<div class="text-center">
 							<p>{{ page.author.name }}</p>
 							<p>Ultima actualizacion del articulo: {{ formatDate(page.updatedAt) }}</p>
