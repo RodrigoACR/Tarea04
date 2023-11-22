@@ -2,8 +2,7 @@
 export default defineNuxtConfig
 ({
   devtools: { enabled: true },
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/snipcart'],
-  snipcart: {publicApiKey: 'Njc0MjUwYWEtODU5YS00MDM4LWJkMjEtNmIyMzU1MWE1NmQwNjM4MzU3NjExMDAzMTQwMjYy'},
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss'],
   components : true,
   content: {
 		documentDriven: true,
